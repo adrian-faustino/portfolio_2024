@@ -1,4 +1,6 @@
 import { USER_DATA } from "@/db";
+import { Divider } from "../common/Divider";
+import { Link } from "../common/Link";
 
 interface IntroProps {}
 
@@ -30,13 +32,14 @@ export function Intro({}: IntroProps) {
 
           <div className="flex gap-2">
             <span>{location}</span>
+            <Divider />
             <span>{email}</span>
           </div>
 
           <div className="flex gap-2">
-            <span>{resume_url}</span>
-            <span>{linkedin_url}</span>
-            <span>{github_url}</span>
+            <Link href={resume_url}>Resume</Link>
+            <Link href={linkedin_url}>LinkedIn</Link>
+            <Link href={github_url}>GitHub</Link>
           </div>
         </div>
       </div>
