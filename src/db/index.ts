@@ -8,8 +8,9 @@ export const USER_DATA: User = {
   description:
     "Experienced Software Developer based in Vancouver, with a proven track record in both small to mid-sized startups and at tech giant Amazon.com.",
   location: "Vancouver, BC",
-  avatar_url: "TODO",
-  resume_url: "TODO",
+  email: "contact.adrianfaustino@gmail.com",
+  avatar_url: "avatar_url_TODO",
+  resume_url: "resume_url_TODO",
   linkedin_url: "https://www.linkedin.com/in/adrianfaustino",
   github_url: "https://github.com/adrian-faustino",
 };

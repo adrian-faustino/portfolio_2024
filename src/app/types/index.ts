@@ -3,6 +3,8 @@ export interface User {
   last_name: string;
   title: string;
   description: string;
+  location: string;
+  email: string;
   avatar_url: string;
   resume_url: string;
   linkedin_url: string;

@@ -31,3 +31,19 @@ body {
     text-wrap: balance;
   }
 }
+
+.debugRed {
+  border: 1px solid red !important;
+}
+
+.debugYellow {
+  border: 1px dashed yellow !important;
+}
+
+.debugBlue {
+  border: 1px double blue !important;
+}
+
+.debugWhite {
+  border: 1px double white !important;
+}

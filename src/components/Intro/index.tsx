@@ -9,6 +9,7 @@ export function Intro({}: IntroProps) {
     title,
     description,
     location,
+    email,
     avatar_url,
     resume_url,
     linkedin_url,
@@ -17,11 +18,9 @@ export function Intro({}: IntroProps) {
 
   return (
     <div>
-      <div>
-        {/* Avatar */}
-        <div>AVTR PLACEHOLDER</div>
+      <div className="flex">
+        <div>{avatar_url}</div>
 
-        {/* Title, Location... */}
         <div>
           <h2>
             {first_name} {last_name}
@@ -29,17 +28,19 @@ export function Intro({}: IntroProps) {
 
           <h3>{title}</h3>
 
-          <div>
+          <div className="flex gap-2">
             <span>{location}</span>
+            <span>{email}</span>
+          </div>
 
+          <div className="flex gap-2">
+            <span>{resume_url}</span>
             <span>{linkedin_url}</span>
-
             <span>{github_url}</span>
           </div>
         </div>
       </div>
 
-      {/* Desc */}
       <div>{description}</div>
     </div>
   );
