@@ -12,8 +12,8 @@ export interface User {
 }
 
 export type DateRange = {
-  start_date: string;
-  end_date?: string;
+  start_date: Date;
+  end_date?: Date;
 };
 
 export type Technology = {
@@ -25,12 +25,12 @@ export type Technology = {
 export interface Experience {
   dateRange: DateRange;
   job_title: string;
-  job_description: string;
+  job_description?: string;
   company_title: string;
   company_url: string;
   location: string;
-  achievements: string[];
   technologies: Technology[];
+  achievements: string[];
 }
 
 export interface Projects {
