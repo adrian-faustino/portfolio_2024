@@ -1,5 +1,5 @@
 // Refactor: persist in ext DB
-import { Experience, Skill, SkillType, User } from "@/app/types";
+import { Experience, Project, Skill, SkillType, User } from "@/app/types";
 
 export const USER_DATA: User = {
   first_name: "Adrian",
@@ -22,6 +22,12 @@ export const SKILLS: { [name: string]: Skill } = {
     logo_url: "typescript",
     type: SkillType.PROGRAMMING_LANGUAGE,
   },
+  NextJS: {
+    title: "NextJS",
+    docs_url: "https://nextjs.org",
+    logo_url: "nextjs",
+    type: SkillType.FRAMEWORK,
+  },
 };
 
 const AMAZON_EXP: Experience = {
@@ -39,3 +45,12 @@ const AMAZON_EXP: Experience = {
   ],
 };
 export const EXPERIENCES_DATA: Experience[] = [AMAZON_EXP];
+
+const SHUFFLE_PROJ: Project = {
+  dateRange: { start_date: new Date(2024, 0) },
+  title: "Shuffle",
+  description: "Spaced reptition learning tool for dancers",
+  technologies: [SKILLS.NextJS, SKILLS.TypeScript],
+  site_url: "https://shuffle-baila.pro",
+};
+export const PROJECTS: Project[] = [SHUFFLE_PROJ];

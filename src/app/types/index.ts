@@ -35,7 +35,7 @@ export interface Experience {
   achievements: string[];
 }
 
-export interface Projects {
+export interface Project {
   dateRange: DateRange;
   title: string;
   description: string;

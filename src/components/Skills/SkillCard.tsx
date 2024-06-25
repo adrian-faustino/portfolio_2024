@@ -1,6 +1,7 @@
 import { Skill } from "@/app/types";
 import { TypeScriptSVG } from "@/svg/TypeScriptSVG";
 import { Link } from "../common/Link";
+import { NextJsSVG } from "@/svg/NextJsSVG";
 
 interface SkillCardProps {
   skill: Skill;
@@ -13,7 +14,8 @@ export function SkillCard({ skill }: SkillCardProps) {
     switch (logo_url) {
       case "typescript":
         return <TypeScriptSVG />;
-
+      case "nextjs":
+        return <NextJsSVG />;
       default:
         return <span>NO_LOGO</span>;
     }
