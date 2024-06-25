@@ -1,5 +1,7 @@
 import { Experience } from "@/app/types";
 import { DateRange } from "../common/DateRange";
+import { Divider } from "../common/Divider";
+import { Link } from "../common/Link";
 
 interface ExperienceCardProps {
   experience: Experience;
@@ -20,18 +22,26 @@ export function ExperienceCard({ experience }: ExperienceCardProps) {
     <div>
       {/* Header (title, dateRange) */}
       <div className="flex justify-between">
-        <span>{company_title}</span>
+        <span>{job_title}</span>
         <DateRange dateRange={dateRange} />
       </div>
 
       {/* Company, desc */}
-      <div></div>
+      <div className="flex gap-2">
+        <Link href={company_url}>{company_title}</Link>
+        <Divider />
+        <span>{location}</span>
+      </div>
 
-      {/* Technologies */}
+      {/* TODO: Technologies */}
       <div></div>
 
       {/* Achievements */}
-      <div></div>
+      <ul>
+        {achievements.map((achievement) => (
+          <li style={{ listStyleType: "disc" }}>{achievement}</li>
+        ))}
+      </ul>
     </div>
   );
 }

@@ -1,5 +1,4 @@
 import { Experience, User } from "@/app/types";
-import { formatDate } from "@/utils/date";
 
 // Refactor: persist in ext DB
 export const USER_DATA: User = {
@@ -18,9 +17,9 @@ export const USER_DATA: User = {
 
 const AMAZON_EXP: Experience = {
   dateRange: { start_date: new Date(2022, 7), end_date: new Date(2024, 0) },
-  job_title: "Frontend Engineer I",
-  company_title: "Aamazon.com",
-  company_url: "https://www.amazon.com",
+  job_title: "Frontend Engineer",
+  company_title: "Amazon.com",
+  company_url: "https://www.aboutamazon.ca/about-us",
   location: "Vancouver, British Columbia, Canada",
   technologies: [],
   achievements: [
