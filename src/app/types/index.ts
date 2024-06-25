@@ -16,11 +16,13 @@ export type DateRange = {
   end_date?: Date;
 };
 
-export type Technology = {
+export interface Skill {
   title: string;
-  logo_url: string;
+  description?: string;
   docs_url: string;
-};
+  logo_url: string;
+  type: SkillType;
+}
 
 export interface Experience {
   dateRange: DateRange;
@@ -29,7 +31,7 @@ export interface Experience {
   company_title: string;
   company_url: string;
   location: string;
-  technologies: Technology[];
+  technologies: Skill[];
   achievements: string[];
 }
 
@@ -37,7 +39,7 @@ export interface Projects {
   dateRange: DateRange;
   title: string;
   description: string;
-  technologies: Technology[];
+  technologies: Skill[];
   site_url: string;
 }
 
@@ -50,22 +52,14 @@ export interface Education {
 }
 
 export enum SkillType {
-  PROGRAMMING_LANGUAGE,
-  FRAMEWORK,
-  CLOUD,
-  TESTING,
-  DATABASE,
-  TOOL,
-  SOFT_SKILL,
-  CONCEPT,
-  STACK,
-  MISC,
-}
-
-export interface Skill {
-  title: string;
-  description?: string;
-  docs_url: string;
-  logo_url: string;
-  type: SkillType;
+  PROGRAMMING_LANGUAGE = "Programming Language",
+  FRAMEWORK = "Framework",
+  CLOUD = "Cloud",
+  TESTING = "Testing",
+  DATABASE = "Database",
+  TOOL = "Tool",
+  SOFT_SKILL = "Soft skill",
+  METHOLOGY = "Methology",
+  STACK = "Stack",
+  MISC = "Misc",
 }

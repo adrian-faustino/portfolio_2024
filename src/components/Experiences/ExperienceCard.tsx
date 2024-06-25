@@ -2,6 +2,7 @@ import { Experience } from "@/app/types";
 import { DateRange } from "../common/DateRange";
 import { Divider } from "../common/Divider";
 import { Link } from "../common/Link";
+import { SkillCard } from "../Skills/SkillCard";
 
 interface ExperienceCardProps {
   experience: Experience;
@@ -34,7 +35,12 @@ export function ExperienceCard({ experience }: ExperienceCardProps) {
       </div>
 
       {/* TODO: Technologies */}
-      <div></div>
+      <div>
+        <span>Technologies:</span>
+        {technologies.map((technology) => (
+          <SkillCard skill={technology} />
+        ))}
+      </div>
 
       {/* Achievements */}
       <ul>

@@ -1,6 +1,6 @@
-import { Experience, User } from "@/app/types";
-
 // Refactor: persist in ext DB
+import { Experience, Skill, SkillType, User } from "@/app/types";
+
 export const USER_DATA: User = {
   first_name: "Adrian",
   last_name: "Faustino",
@@ -15,13 +15,22 @@ export const USER_DATA: User = {
   github_url: "https://github.com/adrian-faustino",
 };
 
+export const SKILLS: { [name: string]: Skill } = {
+  TypeScript: {
+    title: "TypeScript",
+    docs_url: "https://www.typescriptlang.org",
+    logo_url: "typescript",
+    type: SkillType.PROGRAMMING_LANGUAGE,
+  },
+};
+
 const AMAZON_EXP: Experience = {
   dateRange: { start_date: new Date(2022, 7), end_date: new Date(2024, 0) },
   job_title: "Frontend Engineer",
   company_title: "Amazon.com",
   company_url: "https://www.aboutamazon.ca/about-us",
   location: "Vancouver, British Columbia, Canada",
-  technologies: [],
+  technologies: [SKILLS.TypeScript],
   achievements: [
     "Worked on Amazon.com’s Stores - Customer Stores and Advertiser Builder web applications",
     "Implemented UI improvements such as out of stock filter, dynamic navigation widget, mobile web app navigation experiments, and contact rate reduction mechanisms to improve customer UX",
