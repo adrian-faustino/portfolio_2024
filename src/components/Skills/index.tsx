@@ -12,7 +12,7 @@ export function Skills({}: SkillsProps) {
 
       <div>
         {allSkills.map((skill) => (
-          <SkillCard skill={skill} />
+          <SkillCard key={skill.title} skill={skill} />
         ))}
       </div>
     </div>

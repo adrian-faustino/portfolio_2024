@@ -38,14 +38,16 @@ export function ExperienceCard({ experience }: ExperienceCardProps) {
       <div>
         <span>Technologies:</span>
         {technologies.map((technology) => (
-          <SkillCard skill={technology} />
+          <SkillCard key={technology.title} skill={technology} />
         ))}
       </div>
 
       {/* Achievements */}
       <ul>
-        {achievements.map((achievement) => (
-          <li style={{ listStyleType: "disc" }}>{achievement}</li>
+        {achievements.map((achievement, i) => (
+          <li key={i} style={{ listStyleType: "disc" }}>
+            {achievement}
+          </li>
         ))}
       </ul>
     </div>

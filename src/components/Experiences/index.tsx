@@ -10,7 +10,10 @@ export function Experiences({}: ExperiencesProps) {
 
       <div>
         {EXPERIENCES_DATA.map((experience) => (
-          <ExperienceCard experience={experience} />
+          <ExperienceCard
+            key={experience.company_title}
+            experience={experience}
+          />
         ))}
       </div>
     </div>
