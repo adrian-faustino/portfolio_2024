@@ -10,7 +10,7 @@ interface ProjectCardProps {
 export function ProjectCard({ project }: ProjectCardProps) {
   const { dateRange, title, description, technologies, site_url } = project;
   return (
-    <div>
+    <div className="debugWhite">
       <div className="flex justify-between">
         <Link href={site_url}>{title}</Link>
         <DateRange dateRange={dateRange} />

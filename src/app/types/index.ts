@@ -16,6 +16,19 @@ export type DateRange = {
   end_date?: Date;
 };
 
+export enum SkillType {
+  PROGRAMMING_LANGUAGE = "Programming Language",
+  FRAMEWORK = "Framework",
+  CLOUD = "Cloud",
+  TESTING = "Testing",
+  DATABASE = "Database",
+  TOOL = "Tool",
+  SOFT_SKILL = "Soft skill",
+  METHOLOGY = "Methology",
+  STACK = "Stack",
+  MISC = "Misc",
+}
+
 export interface Skill {
   title: string;
   description?: string;
@@ -49,17 +62,4 @@ export interface Education {
   institution_url: string;
   degree: string;
   location: string;
-}
-
-export enum SkillType {
-  PROGRAMMING_LANGUAGE = "Programming Language",
-  FRAMEWORK = "Framework",
-  CLOUD = "Cloud",
-  TESTING = "Testing",
-  DATABASE = "Database",
-  TOOL = "Tool",
-  SOFT_SKILL = "Soft skill",
-  METHOLOGY = "Methology",
-  STACK = "Stack",
-  MISC = "Misc",
 }

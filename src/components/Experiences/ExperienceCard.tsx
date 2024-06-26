@@ -20,7 +20,7 @@ export function ExperienceCard({ experience }: ExperienceCardProps) {
     achievements,
   } = experience;
   return (
-    <div>
+    <div className="debugWhite">
       {/* Header (title, dateRange) */}
       <div className="flex justify-between">
         <span>{job_title}</span>

@@ -10,7 +10,7 @@ export function Projects({}: ProjectsProps) {
 
       <div>
         {PROJECTS.map((project) => (
-          <ProjectCard project={project} />
+          <ProjectCard key={project.title} project={project} />
         ))}
       </div>
     </div>
